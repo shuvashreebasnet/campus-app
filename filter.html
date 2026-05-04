@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details</title>
+
+  <link rel="stylesheet" href="filter.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="filter"> <!--filter categories-->
+    <h1>Filter Events</h1>
+    <button onclick = "window.location.href = 'campus-events.html'">Back to Events</button>
+    <div id= "filterBtnContainer">
+        <button 
+        class = "filterBtn filterBtn--active"
+        onclick = "filterSelection('all')">Show All</button>
+        <button 
+        class = "filterBtn" 
+        onclick = "filterSelection('Socials')">Socials</button>
+        <button 
+        class = "filterBtn" 
+        onclick = "filterSelection('Workshops')">Workshops</button>
+        <button 
+        class = "filterBtn" 
+        onclick = "filterSelection('Athletics')">Athletics</button>
+    </div>
+    <div class = "filterContainer">
+        <div class = "filterItem Socials">Club Rush</div>
+        <div class = "filterItem Workshops">AI Literacy Workshop</div>
+        <div class = "filterItem Athletics">Basketball Game</div>
+        <div class = "filterItem Socials">Bracelet-Making Social</div>
+        <div class = "filterItem Workshops">Resume Workshop</div>
+        <div class = "filterItem Athletics">Baseball Game</div>
+    </div>
+    </main>
+</body>

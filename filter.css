@@ -1,0 +1,32 @@
+.filterBtnContainer {
+    display: none;
+    margin: 20px 0;
+}
+
+.filterContainer {
+    overflow: hidden;
+}
+.show {
+    display: block;
+}
+
+.filterBtn {
+    background-color: #7ea4cc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filterBtn:hover {
+    background-color: #5c89b8;
+    color: white;
+}
+
+.filterBtn.active {
+    background-color: #7ea4cc;
+    color: white;
+}
+
