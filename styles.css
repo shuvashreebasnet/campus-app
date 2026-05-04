@@ -363,3 +363,49 @@ body {
     display: flex;
     align-items: center;
 }
+/*New Stuff */
+.clubs-page {
+  padding: 20px;
+  padding-bottom: 90px; /* leaves room for bottom navbar */
+}
+
+.club-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.club-card {
+  background: white;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  min-height: 180px;
+}
+
+.club-card:hover {
+  background: #f2f2f2;
+}
+
+.club-circle {
+  width: 75px;
+  height: 75px;
+  background: #d9d9d9;
+  border: 1px solid #333;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+
+.club-card h3 {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.club-card p {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+}

@@ -3,33 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Events App</title>
-  <link rel = "stylesheet" href = "./styles.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Clubs</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <h1>Clubs</h1>
-    <nav class = "nav">
-        <a href = "campus-events.html" class = "nav__link">
-            <i class="material-icons nav__icon">calendar_today</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "clubs.html" class = "nav__link  nav__link--active">
-            <i class="material-icons nav__icon">group</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "home.html" class = "nav__link">
-            <i class="material-icons nav__icon">home</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "notifications.html" class = "nav__link">
-            <i id = "notifications-icon"class="material-icons nav__icon">notifications</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "settings.html" class = "nav__link">
-            <i class="material-icons nav__icon">settings</i>
-            <span class = "nav__text"></span>
-        </a>
-    </nav>
+
+  <main class="clubs-page">
+
+    <div class="page-header">
+      <p>Find clubs to join on campus</p>
+      <button class="filter-btn">Filter</button>
+    </div>
+
+    <div class="club-grid">
+
+      <a href="join-club.html" class="club-card">
+        <div class="club-circle"></div>
+        <h3>Computer Science Society</h3>
+        <p>Programming, projects, and networking</p>
+      </a>
+
+      <a href="join-club.html" class="club-card">
+        <div class="club-circle"></div>
+        <h3>CPP Game Dev</h3>
+        <p>Meet students who enjoy games</p>
+      </a>
+
+      <a href="join-club.html" class="club-card">
+        <div class="club-circle"></div>
+        <h3>Art Club</h3>
+        <p>Creative events and workshops</p>
+      </a>
+
+      <a href="join-club.html" class="club-card">
+        <div class="club-circle"></div>
+        <h3>Business Club</h3>
+        <p>Career, networking, and leadership</p>
+      </a>
+
+    </div>
+
+  </main>
+
+  <nav class="nav">
+    <a href="campus-events.html" class="nav__link">
+      <i class="material-icons nav__icon">calendar_today</i>
+      <span class="nav__text"></span>
+    </a>
+
+    <a href="clubs.html" class="nav__link nav__link--active">
+      <i class="material-icons nav__icon">group</i>
+      <span class="nav__text"></span>
+    </a>
+
+    <a href="home.html" class="nav__link">
+      <i class="material-icons nav__icon">home</i>
+      <span class="nav__text"></span>
+    </a>
+
+    <a href="#" class="nav__link">
+      <i class="material-icons nav__icon">notifications</i>
+      <span class="nav__text"></span>
+    </a>
+
+    <a href="#" class="nav__link">
+      <i class="material-icons nav__icon">settings</i>
+      <span class="nav__text"></span>
+    </a>
+  </nav>
+
 </body>
 </html>
