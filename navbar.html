@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Events App</title>
-  <link rel = "stylesheet" href = "./styles.css">
-</head> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar | Campus Events App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
 <body>
-    <nav class = "nav">
-        <a href = "campus-events.html" class = "nav__link">
-            <i class="material-icons nav__icon">calendar_today</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "#" class = "nav__link">
-            <i class="material-icons nav__icon">group</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "home.html" class = "nav__link nav__link--active">
-            <i class="material-icons nav__icon">home</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "notifications.html" class = "nav__link">
-            <i class="material-icons nav__icon">notifications</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "settings.html" class = "nav__link">
-            <i class="material-icons nav__icon">settings</i>
-            <span class = "nav__text"></span>
-        </a>
-    </nav>
-    
+  <main class="app-screen home-screen">
+    <header class="home-header">
+      <h1>Navbar Preview</h1>
+    </header>
+  </main>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="campus-events.html" class="nav__link" aria-label="Campus events">
+      <span class="material-icons nav__icon">calendar_today</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Groups">
+      <span class="material-icons nav__icon">group</span>
+    </a>
+
+    <a href="home.html" class="nav__link nav__link--active" aria-label="Home">
+      <span class="material-icons nav__icon">home</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Notifications">
+      <span class="material-icons nav__icon">notifications</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Profile">
+      <span class="material-icons nav__icon">person</span>
+    </a>
+  </nav>
 </body>
 </html>

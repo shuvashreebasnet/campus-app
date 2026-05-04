@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="app-screen">
+
+    <a href="campus-events.html" class="back-btn">
+      <span class="material-icons">arrow_back</span>
+    </a>
+
+    <div class="event-detail-card">
+      <h1 id="event-name">Event Name</h1>
+
+      <div class="event-image"></div>
+
+      <p id="event-org">by Organization</p>
+      <p id="event-time">Time:</p>
+      <p id="event-description">Description:</p>
+
+      <button class="register-btn" onclick="registerEvent()">Register</button>
+    </div>
+
+  </main>
+
+  <nav class="nav">
+    <a href="campus-events.html" class="nav__link nav__link--active">
+      <span class="material-icons nav__icon">calendar_today</span>
+    </a>
+
+    <a href="#" class="nav__link">
+      <span class="material-icons nav__icon">group</span>
+    </a>
+
+    <a href="home.html" class="nav__link">
+      <span class="material-icons nav__icon">home</span>
+    </a>
+
+    <a href="#" class="nav__link">
+      <span class="material-icons nav__icon">notifications</span>
+    </a>
+
+    <a href="#" class="nav__link">
+      <span class="material-icons nav__icon">person</span>
+    </a>
+  </nav>
+
+  <script>
+    const events = {
+      hackathon: {
+        name: "Hackathon 2026",
+        org: "Organization: Computer Science Club",
+        time: "Time and Date: January 20, 2026 at 10:00 AM",
+        description: "Description: A coding competition where students build creative projects."
+      },
+
+      club: {
+        name: "Club Rush",
+        org: "Organization: Student Union",
+        time: "Time and Date: April 5, 2026 at 2:00 PM",
+        description: "Description: Looking to get involved? Club Rush is your chance to join clubs that fit your interests."
+      },
+
+      basketball: {
+        name: "Basketball Finals",
+        org: "Organization: Athletics Dept",
+        time: "Time and Date: May 1, 2026 at 7:00 PM",
+        description: "Description: Come support the campus basketball team in the finals."
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const eventKey = params.get("event");
+
+    const selectedEvent = events[eventKey] || events.hackathon;
+
+    document.getElementById("event-name").textContent = selectedEvent.name;
+    document.getElementById("event-org").textContent = selectedEvent.org;
+    document.getElementById("event-time").textContent = selectedEvent.time;
+    document.getElementById("event-description").textContent = selectedEvent.description;
+
+   function registerEvent() {
+    const btn = document.querySelector(".register-btn");
+
+    const params = new URLSearchParams(window.location.search);
+    const eventKey = params.get("event");
+
+    let registeredEvents = JSON.parse(localStorage.getItem("registeredEvents")) || [];
+
+    if (!registeredEvents.includes(eventKey)) {
+      registeredEvents.push(eventKey);
+     localStorage.setItem("registeredEvents", JSON.stringify(registeredEvents));
+   }
+
+   btn.textContent = "Registered ✓";
+   btn.style.backgroundColor = "#4CAF50";
+   btn.disabled = true;
+  }
+
+  </script>
+</body>
+</html>

@@ -1,42 +1,343 @@
-body {
-    margin: 0 0 55px 0;
+* {
+    box-sizing: border-box;
 }
 
-.nav{
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #f4f7ff;
+    display: flex;
+    justify-content: center;
+}
+
+.app-screen {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    padding: 25px 30px 85px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 76%, #eef4ff 100%);
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+}
+
+.events-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.events-title-wrap h1,
+.home-header h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.events-title-wrap p,
+.home-header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #222;
+}
+
+.filter-button {
+    position: absolute;
+    right: -5px;
+    top: 29px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+}
+
+.filter-button .material-icons {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.event-card {
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    border: 1.5px solid #111;
+    border-radius: 9px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
+}
+
+.home-screen {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-header {
+    margin-top: 5px;
+}
+
+.nav {
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 390px;
     height: 55px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0,2);
     background-color: #fff;
     display: flex;
-    overflow-x: auto;
+    align-items: center;
+    justify-content: space-around;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .nav__link {
+    height: 100%;
+    flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    min-width: 50px;
-    overflow: hidden;
-    font-family: sans-serif;
-    font-size: 13px;
-    color: #444;
-    text-decoration-thickness: 2px;
+    color: #111;
+    text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .nav__link:hover {
-    background-color:#eee;
+    background-color: #f1f1f1;
 }
 
 .nav__link--active {
-    color: #007bff;
+    color: #000;
+    font-weight: 700;
 }
 
 .nav__icon {
-    font-size: 18px;
+    font-size: 30px;
+}
+
+.page {
+    width: 100%;
+    max-width: 390px;
+    height: 100vh;
+
+    padding: 20px 25px 80px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+
+    overflow-y: auto;
+}
+
+.app-screen {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.back-btn .material-icons {
+    font-size: 32px;
+}
+
+.event-detail-card {
+    background: #fff;
+    border: 1.5px solid #000;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    height: 180px;
+    border: 3px solid #4a90e2;
+    margin: 15px 0;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #7ea4cc;
+}
+
+.event-card {
+    display: block;
+    padding: 15px;
+    background: #fff;
+    border: 1.5px solid #000;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.event-card h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.event-thumb {
+    width: 100%;
+    height: 120px;
+    background: #ccc;
+    border: 2px solid #4a90e2;
+    margin-bottom: 10px;
+}
+
+.event-org {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 390px) {
+    .app-screen,
+    .nav {
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+.home-screen {
+    display: block;
+    text-align: left;
+    padding: 18px 18px 85px;
+}
+
+.home-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.home-top h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.home-top h1 span {
+    font-weight: 700;
+}
+
+.profile-button {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-button .material-icons {
+    font-size: 52px;
+}
+
+.home-section {
+    margin-top: 12px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.section-heading a {
+    color: #000;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.home-event-card {
+    width: 100%;
+    height: 74px;
+    border: 1.5px solid #111;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+}
+
+.blue-card {
+    background: #82aee0;
+}
+
+.purple-card {
+    background: #bd77dc;
+}
+
+.clubs-section {
+    margin-top: 6px;
+}
+
+.club-row {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.club-circle {
+    min-width: 74px;
+    width: 74px;
+    height: 74px;
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.home-section {
+    margin-top: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.home-event-card {
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }

@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Events App</title>
-  <link rel = "stylesheet" href = "./styles.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 <body>
-  <h1>Campus Events</h1>
-    <nav class = "nav">
-        <a href = "#" class = "nav__link  nav__link--active">
-            <i class="material-icons nav__icon">calendar_today</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "clubs.html" class = "nav__link">
-            <i class="material-icons nav__icon">group</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "home.html" class = "nav__link">
-            <i class="material-icons nav__icon">home</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "notifications.html" class = "nav__link">
-            <i id = "notifications-icon"class="material-icons nav__icon">notifications</i>
-            <span class = "nav__text"></span>
-        </a>
-        <a href = "settings.html" class = "nav__link">
-            <i class="material-icons nav__icon">settings</i>
-            <span class = "nav__text"></span>
-        </a>
-    </nav>
+  <main class="app-screen">
+    <header class="events-header">
+      <div class="events-title-wrap">
+        <h1>Campus Events</h1>
+        <p>Select an event to learn more!</p>
+      </div>
+
+      <button class="filter-button" aria-label="Filter events">
+        <span class="material-icons">filter_alt</span>
+      </button>
+    </header>
+
+    <section class="event-list">
+
+  <a href="event.html?event=hackathon" class="event-card">
+    <h3>Hackathon 2026</h3>
+    <div class="event-thumb"></div>
+    <p class="event-org">by Computer Science Club</p>
+  </a>
+
+  <a href="event.html?event=club" class="event-card">
+    <h3>Club Rush</h3>
+    <div class="event-thumb"></div>
+    <p class="event-org">by Student Union</p>
+  </a>
+
+  <a href="event.html?event=basketball" class="event-card">
+    <h3>Basketball Finals</h3>
+    <div class="event-thumb"></div>
+    <p class="event-org">by Athletics Dept</p>
+  </a>
+
+</section>
+  </main>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="campus-events.html" class="nav__link nav__link--active" aria-label="Campus events">
+      <span class="material-icons nav__icon">calendar_today</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Groups">
+      <span class="material-icons nav__icon">group</span>
+    </a>
+
+    <a href="home.html" class="nav__link" aria-label="Home">
+      <span class="material-icons nav__icon">home</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Notifications">
+      <span class="material-icons nav__icon">notifications</span>
+    </a>
+
+    <a href="#" class="nav__link" aria-label="Profile">
+      <span class="material-icons nav__icon">person</span>
+    </a>
+  </nav>
 </body>
 </html>
