@@ -77,7 +77,7 @@
     };
 
     const params = new URLSearchParams(window.location.search);
-    const eventKey = params.get("event");
+    const eventKey = params.get("event") || "hackathon";
 
     const selectedEvent = events[eventKey] || events.hackathon;
 
@@ -86,24 +86,34 @@
     document.getElementById("event-time").textContent = selectedEvent.time;
     document.getElementById("event-description").textContent = selectedEvent.description;
 
-   function registerEvent() {
-    const btn = document.querySelector(".register-btn");
+    function registerEvent() {
+      const btn = document.querySelector(".register-btn");
 
-    const params = new URLSearchParams(window.location.search);
-    const eventKey = params.get("event");
+      let registeredEvents = JSON.parse(localStorage.getItem("registeredEvents")) || [];
 
-    let registeredEvents = JSON.parse(localStorage.getItem("registeredEvents")) || [];
+      if (!registeredEvents.includes(eventKey)) {
+        registeredEvents.push(eventKey);
+        localStorage.setItem("registeredEvents", JSON.stringify(registeredEvents));
+      }
 
-    if (!registeredEvents.includes(eventKey)) {
-      registeredEvents.push(eventKey);
-     localStorage.setItem("registeredEvents", JSON.stringify(registeredEvents));
-   }
+      btn.textContent = "Registered ✓";
+      btn.style.backgroundColor = "#4CAF50";
+      btn.disabled = true;
+    }
 
-   btn.textContent = "Registered ✓";
-   btn.style.backgroundColor = "#4CAF50";
-   btn.disabled = true;
-  }
+    function checkIfRegistered() {
+      const btn = document.querySelector(".register-btn");
 
-  </script>
-</body>
+      const registeredEvents = JSON.parse(localStorage.getItem("registeredEvents")) || [];
+
+      if (registeredEvents.includes(eventKey)) {
+        btn.textContent = "Registered ✓";
+        btn.style.backgroundColor = "#4CAF50";
+        btn.disabled = true;
+      }
+    }
+
+    checkIfRegistered();
+    </script>
+   </body>
 </html>
