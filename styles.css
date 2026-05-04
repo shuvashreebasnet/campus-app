@@ -69,6 +69,10 @@ body {
     line-height: 36px;
 }
 
+.filter-button:hover {
+    color: #4a90e2;
+}
+
 .event-list {
     display: flex;
     flex-direction: column;
@@ -126,6 +130,7 @@ body {
 
 .nav__link:hover {
     background-color: #f1f1f1;
+    color: #4a90e2
 }
 
 .nav__link--active {
@@ -164,12 +169,23 @@ body {
     font-size: 32px;
 }
 
+.back-btn:hover {
+    color:#4a90e2;
+    /*background-color: #eee;*/
+}
+
 .event-detail-card {
     background: #fff;
     border: 1.5px solid #000;
     border-radius: 12px;
     padding: 20px;
     text-align: center;
+}
+
+.event-card:hover {
+    background-color: #7ea4cc;
+    color: #fff;
+    transition:cubic-bezier(0.6, 0.04, 0.98, 0.335) 0.1s;
 }
 
 .event-image {
@@ -187,6 +203,12 @@ body {
     border-radius: 10px;
     border: 1px solid #000;
     background: #7ea4cc;
+}
+
+.register-btn:hover {
+    transition:cubic-bezier(0.5, 0, 0, 0.5) 0.3s;
+    background-color:#5c89b8;
+    color: #fff;
 }
 
 .event-card {
