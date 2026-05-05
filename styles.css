@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Calibri, sans-serif;
 }
 
 html,
@@ -237,6 +238,13 @@ body {
 
 .event-org {
     font-size: 12px;
+    text-align: center;
+    margin: 0;
+
+}
+
+.event-time {
+    font-size: 13px;
     text-align: center;
 }
 

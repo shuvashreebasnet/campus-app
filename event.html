@@ -19,7 +19,7 @@
     <div class="event-detail-card">
       <h1 id="event-name">Event Name</h1>
 
-      <div class="event-image"></div>
+      <img id="event-image" class="event-image" src="" alt="Event image">
 
       <p id="event-org">by Organization</p>
       <p id="event-time">Time:</p>
@@ -51,28 +51,31 @@
       <span class="material-icons nav__icon">person</span>
     </a>
   </nav>
-
+  <!--by abi-->
   <script>
     const events = {
       hackathon: {
         name: "Hackathon 2026",
         org: "Organization: Computer Science Club",
-        time: "Time and Date: January 20, 2026 at 10:00 AM",
-        description: "Description: A coding competition where students build creative projects."
+        time: "Time and Date: May 9, 2026 at 10:00 AM",
+        description: "Description: A coding competition where students build creative projects.",
+        image: "images/hackathon.webp"
       },
 
       club: {
         name: "Club Rush",
         org: "Organization: Student Union",
-        time: "Time and Date: April 5, 2026 at 2:00 PM",
-        description: "Description: Looking to get involved? Club Rush is your chance to join clubs that fit your interests."
+        time: "Time and Date: May 11, 2026 at 2:00 PM",
+        description: "Description: Looking to get involved? Club Rush is your chance to join clubs that fit your interests.",
+        image: "images/clubrush.png"
       },
 
       basketball: {
         name: "Basketball Finals",
         org: "Organization: Athletics Dept",
-        time: "Time and Date: May 1, 2026 at 7:00 PM",
-        description: "Description: Come support the campus basketball team in the finals."
+        time: "Time and Date: May 12, 2026 at 7:00 PM",
+        description: "Description: Come support the campus basketball team in the finals.",
+        image: "images/basketball.webp"
       }
     };
 
@@ -81,10 +84,12 @@
 
     const selectedEvent = events[eventKey] || events.hackathon;
 
+
     document.getElementById("event-name").textContent = selectedEvent.name;
     document.getElementById("event-org").textContent = selectedEvent.org;
     document.getElementById("event-time").textContent = selectedEvent.time;
     document.getElementById("event-description").textContent = selectedEvent.description;
+    document.getElementById("event-image").src = selectedEvent.image;
 
     function registerEvent() {
       const btn = document.querySelector(".register-btn");
