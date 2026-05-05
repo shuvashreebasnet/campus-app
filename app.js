@@ -38,7 +38,7 @@ function clearEvents() {
 
 function clearClubs() {
   localStorage.removeItem("joinedClubs");
-  document.getElementById("joinedClubs").innerHTML = "";
+  document.getElementById("your-clubs").innerHTML = "";
 }
 
 const clubs = {

@@ -347,7 +347,7 @@ body {
     height: 74px;
     border: 1.5px solid #111;
     border-radius: 50%;
-    background-image: "images/CSS.webp";
+    background: #fff;
 }
 
 .home-section {
