@@ -1,14 +1,14 @@
 const events = {
   hackathon: {
-    name: "Hackathon 2026",
+    name: "Hackathon 2026: May 9, 2026 at 10:00 AM",
     color: "#7ea4cc"
   },
   club: {
-    name: "Club Rush",
+    name: "Club Rush: May 11, 2026 at 2:00 PM",
     color: "#a56cc1"
   },
   basketball: {
-    name: "Basketball Finals",
+    name: "Basketball Finals: May 12, 2026 at 7:00 PM",
     color: "#6cc18a"
   }
 };
@@ -36,35 +36,57 @@ function clearEvents() {
   document.getElementById("your-events").innerHTML = "";
 }
 
+function clearClubs() {
+  localStorage.removeItem("joinedClubs");
+  document.getElementById("joinedClubs").innerHTML = "";
+}
+
 const clubs = {
     rosefloat: {
         name: "Cal Poly Rose Float",
         college: "College of Engineering",
-        image: "https://www.clipartkey.com/mpngs/m/208-2086742_cal-poly-rose-float-logo.png"
+        time: "Saturdays from 10AM - 5PM",
+        location: "Rose Float Building",
+        description: "Contribute to creating our annual float for the Rose Parade!",
+        image: "images/ROSE_FLOAT.webp"
     },
     computersciencesociety: {
         name: "Computer Science Society",
         college: "College of Science",
-        image: "https://cppcss.club/assets/logo_for_web_2_2025-DBzYwraK.png"
+        time: "Thursdays from 12PM - 1PM",
+        location: "Bldg 8 Rm 4",
+        description: "Learn about all aspects of Computer Science!",
+        image: "images/CSS.webp"
     },
     shecodes: {
         name: "sheCodes",
         college: "College of Science",
-        image: "https://www.cppshecodes.com/images/25-26/logos/sheCodes.png"
+        time: "Thursdays from 12PM - 1PM",
+        location: "Bldg 8 Rm 4",
+        description: "Participate in Semester-Long Projects to apply your coding skills!",
+        image: "images/sheCodes.webp"
     },
     gamedev: {
         name: "Game Development Club",
         college: "College of Science",
-        image: "https://tse3.mm.bing.net/th/id/OIP.0r7DBUu0Gt0Zmlu6msgDJgHaFO?pid=Api&h=220&P=0"
+        time: "Tuesdays from 12PM - 1PM",
+        location: "Bldg 8 Rm 4",
+        description: "Pitch and implement games!",
+        image: "images/GAME_DEV.webp"
     },
     swift: {
         name: "SWIFT",
         college: "College of Business",
-        image: "https://tse1.mm.bing.net/th/id/OIP.Kmz3ZGxpiJSVn1su-FZkXAAAAA?pid=Api&h=220&P=0"
+        time: "Tuesdays from 12PM - 1PM",
+        location: "Bldg 163 Rm 1004",
+        description: "Learn cyber by doing cyber!",
+        image: "images/SWIFT.webp"
     },
     polisci: {
         name: "Political Science Club",
         college: "College of Letters, Arts, and Social Sciences",
-        image: "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/402729249_1308011053242776_483352576817620717_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby40NzUuYzIifQ&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gGYHrZ9U816Ttweau7Vyo5QGq5TZRyKeoLyLne2wHoKPKZHzs2axpLOubSAXXqQ9gWkVLKfomOpGupobIay-i17&_nc_ohc=Q7dd5eJxtywQ7kNvwFQyFs5&_nc_gid=u2mHKDgTvx6Vhmzwcg-gfw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af5tS8Xn-aWR6tzNZILDPQHe9NrkxAuPTDsce_PRe3VZMw&oe=69FE9CFB&_nc_sid=8b3546"
-    }
-}
+        time: "Thursdays from 12PM - 1PM",
+        location: "Bldg 5 Rm 138",
+        description: "Discuss politics with experts and peers!",
+        image: "images/POLI_SCI.webp"
+    }}
