@@ -76,28 +76,8 @@
 
   let joinedClubs = JSON.parse(localStorage.getItem("joinedClubs")) || [];
 
-  /*if (joinedClubs.includes(clubName)) {
     joinButton.textContent = "Joined ✓";
     joinButton.disabled = true;
     joinButton.classList.add("joined");
-  }*/
-
-  joinButton.addEventListener("click", function () {
-    if (!joinedClubs.includes(clubName)) {
-      joinedClubs.push(clubName);
-      localStorage.setItem("joinedClubs", JSON.stringify(joinedClubs));
-    }
-
-    joinButton.textContent = "Joined ✓";
-    joinButton.disabled = true;
-    joinButton.classList.add("joined");
-
-    //alert("You joined " + clubName + "!");
-
-  function clearClubs() {
-    localStorage.removeItem("joinedClubs");
-    document.getElementById("joinedClubs").innerHTML = "";
-  }
-  });
 </script>
 </html>
