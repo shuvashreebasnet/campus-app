@@ -10,71 +10,39 @@
 </head>
 
 <body>
-  <main class="filter"> <!--filter categories-->
+  <div class ="container">
     <h1>Filter Events</h1>
-    <button onclick = "window.location.href = 'campus-events.html'">Back to Events</button>
-    <div id= "filterBtnContainer">
-        <button 
-        class = "filterBtn filterBtn--active"
-        onclick = "filterSelection('all')">Show All</button>
-        <p>Event Type</p>
-        <div>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('Socials')">Socials</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('Workshops')">Workshops</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('Athletics')">Athletics</button>
-        </div>
-        <p>Start Time</p>
-        <div>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('8AM-12PM')">8AM-12PM</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('1PM-4PM')">1PM-4PM</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('5PM-8PM')">5PM-8PM</button>
-        </div>
-        <p>Day of the Week</p>
-        <div>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('mon')">Monday</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('tue')">Tuesday</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('wed')">Wednesday</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('thu')">Thursday</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('fri')">Friday</button>
-          <button 
-          class = "filterBtn" 
-          onclick = "filterSelection('sat')">Saturday</button>
-          <button
-          class = "filterBtn"
-          onclick = "filterSelection('sun')">Sunday</button>
-        </div>
-    </div>
-    <div class = "filterContainer">
-        <div class = "filterItem Socials">Club Rush</div>
-        <div class = "filterItem Workshops">AI Literacy Workshop</div>
-        <div class = "filterItem Athletics">Basketball Game</div>
-        <div class = "filterItem Socials">Bracelet-Making Social</div>
-        <div class = "filterItem Workshops">Resume Workshop</div>
-        <div class = "filterItem Athletics">Baseball Game</div>
-    </div>
-    </main>
-    <!-- <script src = "filter.js"></script> -->
+
+    <section class = "filter-section">
+      <div class = "filter-header">
+        <h2 class = "filter-title">Filter Events </h2>
+        <button class = "filter-reset" id="reset-filters">Reset Filters</button>
+      </div>
+
+      <div class = "filter-group">
+        <p class = "filter-group-title">Event Type</p>
+        <button class = "filter-btn active" data-filter="category" data-value = "all">All</button>
+        <button class = "filter-btn" data-filter="category" data-value = "socials">Socials</button>
+        <button class = "filter-btn" data-filter="category" data-value = "workshops">Workshops</button>
+        <button class = "filter-btn" data-filter="category" data-value = "athletics">Athletics</button>
+      </div>
+
+      <div class = "filter-group">
+        <p class = "filter-group-title">Time Period</p>
+        <button class = "filter-btn active" data-filter="org" data-value = "all">All</button>
+        <button class = "filter-btn" data-filter="org" data-value = "today">Today</button>
+        <button class = "filter-btn" data-filter="org" data-value = "week">This Week</button>
+        <button class = "filter-btn" data-filter="org" data-value = "month">This Month</button>
+      </div>
+
+      <div class = "filter-group">
+        <p class = "filter-group-title">Start Time</p>
+        <button class = "filter-btn active" data-filter="org" data-value = "all">All</button>
+        <button class = "filter-btn" data-filter="org" data-value = "morning">9AM - 12PM</button>
+        <button class = "filter-btn" data-filter="org" data-value = "afternoon">12PM - 5PM</button>
+        <button class = "filter-btn" data-filter="org" data-value = "evening">5PM - 9PM</button>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
