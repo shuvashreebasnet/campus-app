@@ -17,15 +17,54 @@
         <button 
         class = "filterBtn filterBtn--active"
         onclick = "filterSelection('all')">Show All</button>
-        <button 
-        class = "filterBtn" 
-        onclick = "filterSelection('Socials')">Socials</button>
-        <button 
-        class = "filterBtn" 
-        onclick = "filterSelection('Workshops')">Workshops</button>
-        <button 
-        class = "filterBtn" 
-        onclick = "filterSelection('Athletics')">Athletics</button>
+        <p>Event Type</p>
+        <div>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('Socials')">Socials</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('Workshops')">Workshops</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('Athletics')">Athletics</button>
+        </div>
+        <p>Start Time</p>
+        <div>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('8AM-12PM')">8AM-12PM</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('1PM-4PM')">1PM-4PM</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('5PM-8PM')">5PM-8PM</button>
+        </div>
+        <p>Day of the Week</p>
+        <div>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('mon')">Monday</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('tue')">Tuesday</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('wed')">Wednesday</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('thu')">Thursday</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('fri')">Friday</button>
+          <button 
+          class = "filterBtn" 
+          onclick = "filterSelection('sat')">Saturday</button>
+          <button
+          class = "filterBtn"
+          onclick = "filterSelection('sun')">Sunday</button>
+        </div>
     </div>
     <div class = "filterContainer">
         <div class = "filterItem Socials">Club Rush</div>
@@ -36,4 +75,6 @@
         <div class = "filterItem Athletics">Baseball Game</div>
     </div>
     </main>
+    <!-- <script src = "filter.js"></script> -->
 </body>
+</html>
