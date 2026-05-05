@@ -11,3 +11,5 @@ To make finding out about and joining campus involvement opportunities like even
 **To run the application:**
 Open all the files in VS code. Click the run tab above. Click start debugging. Select Chome as your web debugger. 
 The application will immediately open in a separate browser tab!
+OR
+Open the folder. Open home.html with Chrome. The application should open on the browser starting at the homepage.
